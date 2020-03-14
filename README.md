@@ -2,7 +2,7 @@
 
 **A Wordpress theme for [Village Lane Photography](https://villagelanephotography.com)**
 
-<img src="screenshot.png" height="auto" width="400" alt="Village Lane Photography theme">
+<img src="/screenshot.png" height="auto" width="400" alt="Village Lane Photography theme">
 
 ### What is this?
 
