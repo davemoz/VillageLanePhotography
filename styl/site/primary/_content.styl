@@ -1,0 +1,144 @@
+.page
+	.entry-header
+		h1
+			margin 0
+			padding-bottom: .5em;
+			font-weight: 100;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			border-bottom: 1px solid #f1f1f1;
+	.entry-content
+		display block
+	.entry-content.full-width-grid
+		display grid
+		grid-template-columns 1fr 1fr
+		grid-gap 20px
+	.entry-footer
+		margin-bottom 1.5em
+
+/* Homepage */
+#home-banner
+	width 100%
+	min-height 100%
+	background-size cover
+	background-repeat no-repeat
+	background-position center center
+
+/* About Page */
+.about
+	.entry-content
+		display grid
+		grid-template-columns 1fr 1fr
+		grid-column-gap 2em
+
+/* Portfolio Page */
+.portfolio
+	a.portfolio-link
+		grid-column 1 / -1
+		display flex
+		justify-content center
+		align-items center
+		position relative
+		box-shadow none
+		text-decoration none
+		height 240px
+		border-radius 10px
+		color #fff
+		font-size 28px
+		text-transform uppercase
+		font-weight 100
+		overflow hidden
+		transition all .2s ease-in-out
+		&:hover
+			box-shadow none
+			text-decoration none
+			&:after
+				background-color rgba(255,255,255,0.4)
+				transition all .2s ease-in-out
+			h4
+				opacity 0
+				transform scale(1.1)
+				transition all .2s ease-in-out
+			img
+				transform scale(1.6)
+				transition all .2s ease-in-out
+		&:after
+			content ''
+			display block
+			position absolute
+			top 0
+			right 0
+			bottom 0
+			left 0
+			z-index 10
+			background-color rgba(255,255,255,0.7)
+			transition all .2s ease-in-out
+		h4
+			z-index 20
+			color #000
+			font-weight 100
+			text-shadow none
+			transition all .2s ease-in-out
+			position absolute
+			margin auto
+		img
+			position absolute
+			transform scale(1.4)
+@media screen and (min-width 37.5em)
+	.portfolio
+		a.portfolio-link
+			grid-column auto
+
+.portfolio-child
+	.gallery
+		.gallery-item
+		.grid-sizer
+			width 31%
+		.gutter-sizer
+			width 10px
+		.gallery-item
+			float left
+			margin-bottom 10px
+			img
+				display block
+				max-width 100%
+
+.slider-gallery
+	max-width 900px
+
+/* Prices Page */
+.prices
+	#prices-list
+		display grid
+		margin 0 0 3em
+		padding 0
+		grid-template-columns 1fr
+		list-style none
+		border-bottom 1px solid #e6e6e6
+		border-left 1px solid #e6e6e6
+		li
+			position relative
+			border-top 1px solid #e6e6e6
+			border-right 1px solid #e6e6e6
+			padding 40px
+			h4
+				font-weight 600
+				text-transform uppercase
+				letter-spacing 1px
+				margin 0 0 1em
+			.price
+				position absolute
+				top 40px
+				right 40px
+				opacity 0.4
+		.gift-cert
+			background #f1f1f1
+				
+@media screen and (min-width 37.5em)
+	.prices
+		#prices-list
+			grid-template-columns 1fr 1fr
+
+/* Contact Page */
+.contact
+	display block

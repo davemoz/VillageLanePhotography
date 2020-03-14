@@ -1,0 +1,159 @@
+input[type="text"]
+input[type="email"]
+input[type="url"]
+input[type="password"]
+input[type="search"]
+input[type="date"]
+input[type="tel"]
+input[type="number"]
+textarea
+	color $color__text-input
+	background $color__background-input
+	border 1px solid $color__border-input
+	font-size 18px
+	font-weight 200
+	padding 10px
+	width 100%
+	&:focus
+		background $color__background-input-focus
+		border 1px solid $color__border-input-focus
+		color $color__text-input-focus
+	&::placeholder
+		opacity .6
+textarea
+	max-height 150px
+
+/* Removes the clear button from date inputs */
+input[type="date"]::-webkit-clear-button
+	display none
+/* Removes the spin button */
+input[type="date"]::-webkit-inner-spin-button
+	display none
+/* Always display the drop down caret */
+input[type="date"]::-webkit-calendar-picker-indicator
+	color #2c3e50
+/* A few custom styles for date inputs */
+input[type="date"]
+	appearance none
+	color #95a5a6
+	font-family "Helvetica", arial, sans-serif
+	display inline-block !important
+	visibility visible !important
+input[type="date"]
+focus
+	color #95a5a6
+	box-shadow none
+
+/* Contact Form */
+label
+	font-weight 200
+	text-transform uppercase
+	font-size 16px
+	cursor pointer
+	span
+		margin-top 5px
+input[type="date"]
+	min-height 49px
+	max-height 49px
+.wpcf7-recaptcha
+	background-color #f7f7f7
+	padding 20px 0
+	margin-bottom 20px
+	display flex
+	justify-content center
+span.wpcf7-list-item
+	display flex
+	align-items center
+	margin 10px 0
+	&.first
+		margin-top 1em
+	label
+		display flex
+		align-items center
+	.wpcf7-list-item-label
+		margin-right 1em
+	input[type="checkbox"],
+	input[type="radio"]
+		position relative
+		margin-right 10px
+		-webkit-appearance none
+		min-width 25px
+		width 25px
+		min-height 25px
+		height 25px
+		border 2px solid #e2e2e2
+		cursor pointer
+		&:hover
+			border 2px solid #a9a9a9
+	input[type="checkbox"]
+		border-radius 4px
+		&:before
+			display none
+			content "✓"
+			font-style normal
+			font-weight 900
+			font-variant normal
+			text-rendering auto
+			-webkit-font-smoothing antialiased
+			position absolute
+			font-size 20px
+			color #fff
+			top -3px
+			left 2px
+		&:checked
+			background #32b594
+			&:before
+				display inline-block
+		&:focus
+			outline none
+	input[type="radio"]
+		border-radius 50px
+		&:checked
+			background #32b594
+		&:focus
+			outline none
+	&.has-free-text
+		margin 0
+	.wpcf7-free-text
+		max-height 30px
+		padding 5px
+.newsletter-disclaimer
+	display block
+	font-size 12px
+	color #a9a9a9
+	padding-left 50px
+	text-transform none
+
+/* Utility/reusable styles */
+.required
+	color red
+.wpcf7
+	p
+		margin 0
+		padding 0
+		padding-top 20px
+		padding-bottom 20px
+		&.sub-head
+			padding-top 0
+[data-class="wpcf7cf_group"]
+	margin-top 10px
+.inline-form
+	display grid
+	grid-gap 40px
+	padding 20px 0
+	.wpcf7-exclusive-checkbox,
+	.wpcf7-radio
+		display flex
+		justify-content flex-start
+		align-items center
+		.wpcf7-list-item
+			margin 0
+			margin-top 10px
+	.col-push
+		padding-top 41px
+		small
+			display block
+.two-col
+	grid-template-columns 1fr 1fr
+.four-col
+	grid-template-columns repeat(4, 1fr)

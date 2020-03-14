@@ -1,0 +1,55 @@
+#colophon
+	width 100%
+	margin 0
+	display	flex
+	justify-content center
+	background-color #f1f1f1
+	.footer-wrap-both
+	.footer-wrap-right
+		display flex
+		flex-direction column
+		flex 1 1 auto
+		margin 0 auto
+		align-items center
+		+widerThan($mobileS)
+			flex-direction row
+	.footer-wrap-both
+		justify-content space-between
+	.footer-wrap-right
+		justify-content flex-end
+	.social-navigation
+		ul
+			list-style none
+			display flex
+			margin 0
+			padding 0
+			li
+				&:first-child
+					margin-right 10px
+				a
+					height 50px
+					width 50px
+					display flex
+					justify-content center
+					align-items center
+					background rgba(0,0,0,0.2)
+					border-radius 100%
+				&:hover
+					a
+						background rgba(0,0,0,0.1)
+	.site-info
+		display flex
+		justify-content center
+		align-items center
+		padding-left 0
+		font-size 10px
+		color #ccc
+		+widerThan($mobileS)
+			font-size 12px
+			padding-left 1em
+		a
+			color #ccc
+		p
+			text-align center
+			+widerThan($mobileS)
+				text-align right
