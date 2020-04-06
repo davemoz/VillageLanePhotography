@@ -1,10 +1,10 @@
 ( function() {
 	
 	/* Flickity - Homepage Slider */
-	var homepageVidSlider = document.querySelector('.wp-block-gallery');
-	homepageVidSlider.classList.remove('is-hidden');
-	homepageVidSlider.offsetHeight;
-	var homepageVidFlkty = new Flickity( homepageVidSlider, {
+	var homepageSlider = document.querySelector('.wp-block-gallery');
+	homepageSlider.classList.remove('is-hidden');
+	homepageSlider.offsetHeight;
+	var homepageFlkty = new Flickity( homepageSlider, {
 		// options
 		autoPlay: 5000,
 		draggable: true,
@@ -13,7 +13,8 @@
 		prevNextButtons: true,
 		cellAlign: 'center',
 		imagesLoaded: true,
+		lazyLoad: true,
 	});
-	homepageVidSlider.addEventListener('mouseleave', function(e) { homepageVidFlkty.playPlayer() });
+	homepageSlider.addEventListener('mouseleave', function(e) { homepageFlkty.playPlayer() });
 
 } )();

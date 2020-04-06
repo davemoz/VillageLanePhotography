@@ -57,25 +57,30 @@
 				display none
 			&.flickity-enabled
 				opacity 1
-			.blocks-gallery-item
-				display block
-				margin 0 30px 0 0
-				+widerThan($mobileS)
-					width min-content
-					height 100%
-				figure
-					display flex
-					justify-content center
-					align-items center
+			.flickity-slider
+				display flex
+				align-items center
+				+widerThan($tabletS)
+					align-items flex-start
+				.blocks-gallery-item
+					display block
+					margin 0 30px 0 0
 					+widerThan($mobileS)
-						display block
-						width max-content
-					img
-						height 300px
+						width min-content
+						height 100%
+					figure
+						display flex
+						justify-content center
+						align-items center
 						+widerThan($mobileS)
-							height 400px
-						+widerThan($mobileL)
-							height 500px
+							display block
+							width max-content
+						img
+							max-height 300px
+							+widerThan($mobileS)
+								max-height 400px
+							+widerThan($mobileL)
+								max-height 500px
 
 /*******************************
  *
