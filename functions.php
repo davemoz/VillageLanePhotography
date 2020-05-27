@@ -45,9 +45,7 @@ function villagelanephotography_setup() {
 		'primary' => esc_html__( 'Primary Menu', 'villagelanephotography' ),
 		'social' => esc_html__( 'Social Menu', 'villagelanephotography' ),
 	) );
-	
-	
-	
+
 	/**
 	* Custom Nav Walker (with social media icons) by Aurooba Ahmed
 	* This uses Font Awesome and adds in the correct icon by detecting the URL of the menu item.
@@ -354,16 +352,11 @@ add_filter( 'post_gallery', function( $html, $attr, $instance )
     return $html;
 }, 10 ,3 );
 
-
-
 /**
  * Remove wpautop
  */
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
-
-
-
 
 /**
  * Place a Booking button after nav menu
@@ -410,14 +403,6 @@ function vl_menucart($menu, $args) {
 	return $menu . $social;
 
 }
-
-
-return $menu . '<!-- Start Square Appointments Embed code --> <a target="_top" style=" background-color: #BC9C00; color: white; height: 40px; text-transform: uppercase; font-family: "Square Market", "helvetica neue", helvetica, arial, sans-serif; letter-spacing: 1px; line-height: 38px; padding: 0 28px; border-radius: 3px; font-weight: 500; font-size: 14px; cursor: pointer; display: inline-block; " href="https://square.site/book/C7Q9ZVBHM4RCQ/village-lane-photography" rel="nofollow">Book A Shoot</a> <!-- End Square Appointments Embed code -->';
-
-*/
-
-
-
 
 /**
  * Filter image gallery links output
@@ -479,6 +464,7 @@ $itemwidth = $columns > 0 ? floor(100/$columns) : 100;
 $float = is_rtl() ? 'right' : 'left';
 $selector = "gallery-{$instance}";
 $gallery_style = '';
+
 /**
  * Filter whether to print default gallery styles.
  *
@@ -511,6 +497,7 @@ if ( apply_filters( 'use_default_gallery_style', ! $html5 ) ) {
 }
 $size_class = sanitize_html_class( $atts['size'] );
 $gallery_div = "<div id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class}'>";
+
 /**
  * Filter the default gallery shortcode CSS styles.
  *
@@ -559,10 +546,6 @@ $output .= "
 	</div>\n";
 return $output;
 }
-
-
-
-
 
 /**
  * SVG sprite
