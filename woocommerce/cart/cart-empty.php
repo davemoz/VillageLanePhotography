@@ -32,7 +32,7 @@ if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 */
 ?>
 <p class="return-to-gift-card">
-	<a class="button wc-backward" href="<?php echo get_permalink( $product_id ); ?>">
+	<a class="button wc-backward" href="https://villagelanephotography.com/?p=10052">
 		<?php esc_html_e( 'Back to gift cards', 'woocommerce' ); ?>
 	</a>
 </p>
