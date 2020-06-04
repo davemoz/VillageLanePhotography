@@ -116,7 +116,7 @@ function vlp_setup() {
 	            $item_output .= '</i></a>';
 	            $item_output .= $args->after;
 			} elseif (stripos($item->title, 'clients') !== false)  {
-	            $item_output .= '<a'. $attributes .' class="menu-item-clients"><i class="fas fa-lock"></i> '. $item->title;
+	            $item_output .= '<a'. $attributes .' class="menu-item-clients">'. $item->title .' <i class="fas fa-lock"></i>';
 	            $item_output .= '</a>';
 	            $item_output .= $args->after;
 	        } else {
