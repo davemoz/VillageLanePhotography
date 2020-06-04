@@ -31,9 +31,11 @@ if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 <?php endif; ?>
 */
 $product_obj = new WC_Product( $product[ '10052' ]);
-$url = $product_obj->get_permalink(); ?>
-<p class="return-to-gift-card">
-	<a class="button wc-backward" href="<?php echo $url; ?>">
-		<?php esc_html_e( 'Back to gift cards', 'woocommerce' ); ?>
-	</a>
-</p>
+$url = $product_obj->get_permalink();
+if( class_exists( 'WooCommerce' ) ) : ?>
+	<p class="return-to-gift-card">
+		<a class="button wc-backward" href="<?php echo $url; ?>">
+			<?php esc_html_e( 'Back to gift cards', 'woocommerce' ); ?>
+		</a>
+	</p>
+<?php endif; ?>
