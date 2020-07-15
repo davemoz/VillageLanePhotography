@@ -1,7 +1,7 @@
 ( function() {
 	
 	/* Flickity - Homepage Slider */
-	var homepageSlider = document.querySelector('.wp-block-gallery');
+	var homepageSlider = document.querySelector('.blocks-gallery-grid');
 	homepageSlider.classList.remove('is-hidden');
 	homepageSlider.offsetHeight;
 	var homepageFlkty = new Flickity( homepageSlider, {
