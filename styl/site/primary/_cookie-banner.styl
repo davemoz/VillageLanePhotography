@@ -1,12 +1,8 @@
 #cookie-notice
-	min-width 70vw
-	width 70vw
-	left 50%
-	transform translate(-50%)
 	border-radius 10px
 	bottom 8px
 	.cookie-notice-container
-		display flex
+		display flex !important
 		justify-content space-between
 		width 98%
 		margin 0 auto
@@ -15,6 +11,8 @@
 		#cn-notice-text
 			display block
 		.button
+			&[data-cookie-set="accept"]
+				color #000
 			&[data-cookie-set="refuse"]
 				background transparent
 			&.cn-more-info
